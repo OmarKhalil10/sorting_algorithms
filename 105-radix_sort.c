@@ -68,12 +68,12 @@ void radix_sort(int *array, size_t size)
 	int exp, maximum = 0;
 	int *output = '\0'; /* output array should be n(size) */
 
-	if (array == '\0' || size < 2)
+	if (array == 0 || size < 2)
 		return;
 
 	maximum = getMax(array, size);
 	output = malloc(size * sizeof(int));
-	if (output == '\0')
+	if (output == 0)
 		return;
 	/*
 	* Do counting sort for every digit. Note that instead
